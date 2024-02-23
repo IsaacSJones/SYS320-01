@@ -62,5 +62,6 @@ $ITSInstructors = $FullTable | where-object { ($_."Class Code" -ilike "SYS*") -o
                              | Sort-Object "Instructor" `
                              | select "Instructor" -Unique
 
+#iiii
 $FullTable | where { $_.Instructor -in $ITSInstructors.Instructor } `
            | Group-Object "Instructor" | select Count, Name | Sort-Object Count -Descending
