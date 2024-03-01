@@ -1,6 +1,7 @@
 ﻿. (Join-Path $PSScriptRoot Apache-Parse.ps1)
-. (Join-Path $PSScriptRoot Users.ps1)
 . (Join-Path $PSScriptRoot work.ps1)
+. (Join-Path $PSScriptRoot Users.ps1)
+. (Join-Path $PSScriptRoot Event-Logs.ps1)
 
 clear
 
@@ -45,7 +46,7 @@ while($operation){
 
     elseif($choice -eq 3){
         
-        $riskLevel = 3
+        $riskLevel = 10
 
         $days = Read-Host -Prompt "Please enter the number of days to check"
 
